@@ -1,0 +1,12 @@
+---
+title: "About Report"
+---
+&nbsp;
+&nbsp;
+
+This document displays data taken from publicly available 2014 census records. Link to get started with [Census Data](https://factfinder.census.gov/faces/nav/jsf/pages/download_center.xhtml).
+
+All R code for this and other projects can be found on my [GitHub](https://github.com/RealLifeData) site. 
+
+
+

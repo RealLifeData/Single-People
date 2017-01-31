@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Where are the single people?</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+
+.section h2 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h3 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h4 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h5 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+.section h6 {
+  padding-top: 65px;
+  margin-top: -65px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">RLD</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Report</a>
+</li>
+<li>
+  <a href="about.html">About</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Where are the single people?</h1>
+
+</div>
+
+
+<p> </p>
+<p>A friend of mine recently asked me what seemed like a fairly simple question: where are all of the single men? I was working with census data for my job, so I decided to look into it. Below is a summary of the results.</p>
+<p>Summary: There are more never married men than women in the 24-34 age group (Figures 1, 3, 5; +8,066,286). This effect is present but greatly reduced in the 35-44 range (Figures 2, 4, 6; +527,913). There are far more single men in the 24-34 group when compared to the 35-44 group (+7,618,664), this is also true for women but to a lesser degree (+80,291).</p>
+<p>While there are generally more never married men than women in the younger age group, there are some cities where the reverse is true. The places where the numbers are stacked against men tend to be larger cities (Tables 1 &amp; 5A), while the areas that single women outnumber single men tend to be smaller ones (Tables 3 &amp; 5B). This effect is carried over into the older (35-44) age group for both genders (Tables 2, 6A, 4, 6B).</p>
+<p>It is important to remember that this is not longitudinal data of one population, it is a snapshot in time of two separate populations.</p>
+<p>So, what does this mean? There are dramatically more single men in the younger than older age group. This effect is present, but much less dramatic for the women surveyed. My best guess is men in the older age group are married to women in the younger age group. The lack of a dramatic dip in single women among the younger and older group could be because the women in the older age group also married earlier either to similarly aged or older men. This is referred to as a “floor effect”. The numbers are so low in the younger female age group that they don’t have room to dip to the same degree as the numbers for the men.</p>
+<p> </p>
+<div id="figure-1.-males-never-married-ages-24-34" class="section level3">
+<h3>Figure 1. Males: Never Married Ages 24-34</h3>
+<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p> </p>
+</div>
+<div id="table-1.-males-top-10-american-cities-which-cities-have-the-most-single-men-ages-24-34" class="section level3">
+<h3>Table 1. Males: Top 10 American Cities: Which cities have the most single men ages 24-34?</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Rank: Men 24-34</th>
+<th align="left">City</th>
+<th align="right">Density</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">Houston, TX</td>
+<td align="right">55656</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">Los Angeles, CA</td>
+<td align="right">44966</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">Chicago, IL</td>
+<td align="right">37739</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="left">Miami, FL</td>
+<td align="right">36887</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="left">San Antonio, TX</td>
+<td align="right">33729</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="left">Philadelphia, PA</td>
+<td align="right">33652</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="left">Saint Louis, MO</td>
+<td align="right">29796</td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="left">Minneapolis, MN</td>
+<td align="right">29051</td>
+</tr>
+<tr class="odd">
+<td align="right">9</td>
+<td align="left">New York, NY</td>
+<td align="right">29037</td>
+</tr>
+<tr class="even">
+<td align="right">10</td>
+<td align="left">Cincinnati, OH</td>
+<td align="right">28974</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</div>
+<div id="figure-2.-males-never-married-ages-35-44" class="section level3">
+<h3>Figure 2. Males: Never Married Ages 35-44</h3>
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p> </p>
+</div>
+<div id="table-2.-males-top-10-american-cities-which-cities-have-the-most-single-men-ages-35-44" class="section level3">
+<h3>Table 2. Males: Top 10 American Cities: Which cities have the most single men ages 35-44?</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Rank: Men 35-44</th>
+<th align="left">City</th>
+<th align="right">Density</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">Houston, TX</td>
+<td align="right">55656</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">Los Angeles, CA</td>
+<td align="right">44966</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">Chicago, IL</td>
+<td align="right">37739</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="left">Miami, FL</td>
+<td align="right">36887</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="left">San Antonio, TX</td>
+<td align="right">33729</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="left">Philadelphia, PA</td>
+<td align="right">33652</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="left">Saint Louis, MO</td>
+<td align="right">29796</td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="left">Minneapolis, MN</td>
+<td align="right">29051</td>
+</tr>
+<tr class="odd">
+<td align="right">9</td>
+<td align="left">New York, NY</td>
+<td align="right">29037</td>
+</tr>
+<tr class="even">
+<td align="right">10</td>
+<td align="left">Cincinnati, OH</td>
+<td align="right">28974</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</div>
+<div id="figure-3.-females-never-married-ages-24-34" class="section level3">
+<h3>Figure 3. Females: Never Married Ages 24-34</h3>
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p> </p>
+</div>
+<div id="table-3.-females-top-10-american-cities-which-cities-have-the-most-single-women-ages-24-34" class="section level3">
+<h3>Table 3. Females: Top 10 American Cities: Which cities have the most single women ages 24-34?</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Rank: Women 24-34</th>
+<th align="left">City</th>
+<th align="right">Density</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">Houston, TX</td>
+<td align="right">55656</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">Los Angeles, CA</td>
+<td align="right">44966</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">Philadelphia, PA</td>
+<td align="right">33652</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="left">Chicago, IL</td>
+<td align="right">37739</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="left">Cincinnati, OH</td>
+<td align="right">28974</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="left">New York, NY</td>
+<td align="right">29037</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="left">Saint Louis, MO</td>
+<td align="right">29796</td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="left">Detroit, MI</td>
+<td align="right">19713</td>
+</tr>
+<tr class="odd">
+<td align="right">9</td>
+<td align="left">Kansas City, MO</td>
+<td align="right">25654</td>
+</tr>
+<tr class="even">
+<td align="right">10</td>
+<td align="left">San Antonio, TX</td>
+<td align="right">33729</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</div>
+<div id="figure-4.-females-never-married-ages-35-44" class="section level3">
+<h3>Figure 4. Females: Never Married Ages 35-44</h3>
+<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p> </p>
+</div>
+<div id="table-4.-females-top-10-american-cities-which-cities-have-the-most-single-women-ages-35-44" class="section level3">
+<h3>Table 4. Females: Top 10 American Cities: Which cities have the most single women ages 35-44?</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Rank: Women 35-44</th>
+<th align="left">City</th>
+<th align="right">Density</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">Houston, TX</td>
+<td align="right">55656</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">Los Angeles, CA</td>
+<td align="right">44966</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">Philadelphia, PA</td>
+<td align="right">33652</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="left">Chicago, IL</td>
+<td align="right">37739</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="left">Cincinnati, OH</td>
+<td align="right">28974</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="left">New York, NY</td>
+<td align="right">29037</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="left">Saint Louis, MO</td>
+<td align="right">29796</td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="left">Detroit, MI</td>
+<td align="right">19713</td>
+</tr>
+<tr class="odd">
+<td align="right">9</td>
+<td align="left">Kansas City, MO</td>
+<td align="right">25654</td>
+</tr>
+<tr class="even">
+<td align="right">10</td>
+<td align="left">San Antonio, TX</td>
+<td align="right">33729</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</div>
+<div id="figure-5.-how-large-is-the-disparity-of-single-men-and-women-in-ages-24-34" class="section level3">
+<h3>Figure 5. How large is the disparity of single Men and Women in ages 24-34?</h3>
+<p><img src="index_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p> </p>
+</div>
+<div id="table-5.-top-10-american-cities-where-are-these-differences-the-biggest-in-ages-24-34" class="section level3">
+<h3>Table 5. Top 10 American Cities: Where are these differences the biggest in ages 24-34?</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Rank: More Men than Women Ages 24-34</th>
+<th align="left">City</th>
+<th align="right">Difference</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">Houston, TX</td>
+<td align="right">33904</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">Los Angeles, CA</td>
+<td align="right">25731</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">Miami, FL</td>
+<td align="right">25349</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="left">San Antonio, TX</td>
+<td align="right">22061</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="left">Chicago, IL</td>
+<td align="right">19703</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="left">Minneapolis, MN</td>
+<td align="right">17553</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="left">Dallas, TX</td>
+<td align="right">15984</td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="left">Las Vegas, NV</td>
+<td align="right">15927</td>
+</tr>
+<tr class="odd">
+<td align="right">9</td>
+<td align="left">Atlanta, GA</td>
+<td align="right">15702</td>
+</tr>
+<tr class="even">
+<td align="right">10</td>
+<td align="left">Saint Louis, MO</td>
+<td align="right">15642</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Rank: More Women than Men Ages 24-34</th>
+<th align="left">City</th>
+<th align="right">Difference</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">Bluff City, AR</td>
+<td align="right">755</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">Fishing Creek, MD</td>
+<td align="right">755</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">Annapolis Junction, MD</td>
+<td align="right">751</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="left">Johnsonville, IL</td>
+<td align="right">750</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="left">Pattison, MS</td>
+<td align="right">749</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="left">Anderson, AK</td>
+<td align="right">746</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="left">Cecil, PA</td>
+<td align="right">745</td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="left">Circleville, NY</td>
+<td align="right">744</td>
+</tr>
+<tr class="odd">
+<td align="right">9</td>
+<td align="left">Fort Hall, ID</td>
+<td align="right">744</td>
+</tr>
+<tr class="even">
+<td align="right">10</td>
+<td align="left">Idaho Falls, ID</td>
+<td align="right">744</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</div>
+<div id="figure-6.-how-large-is-the-disparity-of-single-men-and-women-in-ages-35-44" class="section level3">
+<h3>Figure 6. How large is the disparity of single Men and Women in ages 35-44?</h3>
+<p><img src="index_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p> </p>
+</div>
+<div id="table-6.-top-10-american-cities-where-are-these-differences-the-biggest-in-ages-35-44" class="section level3">
+<h3>Table 6. Top 10 American Cities: Where are these differences the biggest in ages 35-44?</h3>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Rank: More Men than Women Ages 35-44</th>
+<th align="left">City</th>
+<th align="right">Difference</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">Los Angeles, CA</td>
+<td align="right">10148</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">Philadelphia, PA</td>
+<td align="right">6524</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">New York, NY</td>
+<td align="right">6138</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="left">Dallas, TX</td>
+<td align="right">6132</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="left">Chicago, IL</td>
+<td align="right">5287</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="left">Seattle, WA</td>
+<td align="right">5217</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="left">San Francisco, CA</td>
+<td align="right">4957</td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="left">Austin, TX</td>
+<td align="right">4799</td>
+</tr>
+<tr class="odd">
+<td align="right">9</td>
+<td align="left">Atlanta, GA</td>
+<td align="right">4352</td>
+</tr>
+<tr class="even">
+<td align="right">10</td>
+<td align="left">San Diego, CA</td>
+<td align="right">4071</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Rank: More Women than Men Ages 35-44</th>
+<th align="left">City</th>
+<th align="right">Difference</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">Vancouver, WA</td>
+<td align="right">2507</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="left">Amarillo, TX</td>
+<td align="right">2451</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="left">Bellevue, WA</td>
+<td align="right">2303</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="left">Riverside, CA</td>
+<td align="right">1837</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="left">Dayton, OH</td>
+<td align="right">1771</td>
+</tr>
+<tr class="even">
+<td align="right">6</td>
+<td align="left">Plano, TX</td>
+<td align="right">1737</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="left">Carlsbad, CA</td>
+<td align="right">1732</td>
+</tr>
+<tr class="even">
+<td align="right">8</td>
+<td align="left">Corona, CA</td>
+<td align="right">1704</td>
+</tr>
+<tr class="odd">
+<td align="right">9</td>
+<td align="left">Ogden, UT</td>
+<td align="right">1634</td>
+</tr>
+<tr class="even">
+<td align="right">10</td>
+<td align="left">Gilbert, AZ</td>
+<td align="right">1588</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
